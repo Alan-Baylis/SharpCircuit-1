@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B11B753E-F8BF-45C1-8361-CC676CC51355}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Schematics</RootNamespace>
+    <AssemblyName>Schematics</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="IComponent.cs" />
+    <Compile Include="ITerminal.cs" />
+    <Compile Include="Resistor.cs" />
+    <Compile Include="ComponentBase.cs" />
+    <Compile Include="Circuit.cs" />
+    <Compile Include="TerminalCollection.cs" />
+    <Compile Include="Junction.cs" />
+    <Compile Include="IJunction.cs" />
+    <Compile Include="PowerSource.cs" />
+    <Compile Include="SeriesCircuit.cs" />
+    <Compile Include="BasicCircuit.cs" />
+    <Compile Include="SchematicDiagram.cs" />
+    <Compile Include="ILayout.cs" />
+    <Compile Include="IProbes.cs" />
+    <Compile Include="MaleHeader.cs" />
+    <Compile Include="ThreeWireLoadCell.cs" />
+    <Compile Include="WeightSensingUnit.cs" />
+    <Compile Include="LoadCellAmplifier.cs" />
+    <Compile Include="IDesignSurface.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

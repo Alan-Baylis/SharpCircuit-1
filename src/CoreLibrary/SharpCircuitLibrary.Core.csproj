@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23D582F4-2FF2-4F6B-B0F8-FF3EB67923DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpCircuit.CoreLibrary</RootNamespace>
+    <AssemblyName>SharpCircuit.CoreLibrary</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="IDevice.cs" />
+    <Compile Include="CoreDelegates.cs" />
+    <Compile Include="ITerminal.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="ConnectionTerminals.cs" />
+    <Compile Include="ConnectionTerminal.cs" />
+    <Compile Include="CircuitNode.cs" />
+    <Compile Include="ICircuitNode.cs" />
+    <Compile Include="CircuitNodes.cs" />
+    <Compile Include="SupplyVoltageDC.cs" />
+    <Compile Include="ISupplyVoltageDC.cs" />
+    <Compile Include="CircuitBoard.cs" />
+    <Compile Include="ICircuitBoard.cs" />
+    <Compile Include="CircuitBoardDevices.cs" />
+    <Compile Include="CircuitBoardQuery.cs" />
+    <Compile Include="INameGuidPair.cs" />
+    <Compile Include="DeviceIdentity.cs" />
+    <Compile Include="DigitalPinTerminal.cs" />
+    <Compile Include="DigitalStateOption.cs" />
+    <Compile Include="Helpers\BitStringHelpers.cs" />
+    <Compile Include="Helpers\HexStringHelpers.cs" />
+    <Compile Include="Helpers\HexCharHelpers.cs" />
+    <Compile Include="Helpers\BoolArrayHelpers.cs" />
+    <Compile Include="Helpers\ByteHelpers.cs" />
+    <Compile Include="Helpers\ShortHelper.cs" />
+    <Compile Include="Nibble.cs" />
+    <Compile Include="Helpers\CharArrayHelper.cs" />
+    <Compile Include="Helpers\ByteArrayHelper.cs" />
+    <Compile Include="Helpers\IntHelper.cs" />
+    <Compile Include="Helpers\LongHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+</Project>
